@@ -1,0 +1,100 @@
+# =============================================
+# theme.toml
+# =============================================
+
+[flavor]
+dark  = ""
+light = ""
+
+# --- Manager ---
+
+[manager]
+cwd = { fg = "#67B5ED" }
+
+find_keyword  = { fg = "#E5C872", bold = true }
+find_position = { fg = "#D389E5", bold = true }
+
+symlink_target = { italic = true }
+
+marker_copied   = { fg = "#79BD7E", bg = "#79BD7E" }
+marker_cut      = { fg = "#DF6C5A", bg = "#DF6C5A" }
+marker_selected = { fg = "#67B5ED", bg = "#67B5ED" }
+
+border_symbol = "│"
+border_style  = { fg = "#35424C" }
+
+# --- Tabs ---
+
+[tabs]
+active   = { bg = "#8B5CF6", bold = true }
+inactive = { fg = "#6C8094", bg = "#191D27" }
+
+# --- Mode ---
+
+[mode]
+normal_main = { bg = "#67B5ED", bold = true }
+normal_alt  = { fg = "#67B5ED", bg = "#35424C" }
+
+select_main = { bg = "#DF6C5A", bold = true }
+select_alt  = { fg = "#DF6C5A", bg = "#35424C" }
+
+# --- Status ---
+
+[status]
+
+# --- Which ---
+
+[which]
+mask = { bg = "#191D27" }
+cand = { fg = "#67B5ED" }
+rest = { fg = "#465C6D" }
+desc = { fg = "#D389E5" }
+
+# --- Confirm ---
+
+[confirm]
+border = { fg = "#67B5ED" }
+title  = { fg = "#67B5ED" }
+
+# --- Notification ---
+
+[notify]
+title_info  = { fg = "#79BD7E" }
+title_warn  = { fg = "#E5C872" }
+title_error = { fg = "#DF6C5A" }
+
+# --- Input ---
+
+[input]
+border = { fg = "#67B5ED" }
+
+# --- Task manager ---
+
+[tasks]
+border  = { fg = "#67B5ED" }
+hovered = { fg = "#D389E5", bold = true }
+
+# --- File-specific styles ---
+
+[filetype]
+rules = [
+  { mime = "image/*", fg = "#E5C872" },
+  { mime = "{audio,video}/*", fg = "#D389E5" },
+  { mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive}", fg = "#DF6C5A" },
+  { mime = "application/{pdf,doc,rtf}", fg = "#67B5ED" },
+  { url = "*/", fg = "#67B5ED" },
+]
+
+# --- Icons ---
+
+[icon]
+dirs = [
+  { name = ".config",   text = "", fg = "#67B5ED" },
+  { name = ".git",      text = "", fg = "#DF6C5A" },
+  { name = "Desktop",   text = "", fg = "#84DDE0" },
+  { name = "Documents", text = "", fg = "#84DDE0" },
+  { name = "Downloads", text = "", fg = "#84DDE0" },
+  { name = "Music",     text = "", fg = "#84DDE0" },
+  { name = "Pictures",  text = "", fg = "#84DDE0" },
+  { name = "Videos",    text = "", fg = "#84DDE0" },
+]

@@ -1,0 +1,60 @@
+# =============================================
+# yazi.toml
+# =============================================
+
+[manager]
+ratio          = [ 1, 4, 3 ]
+sort_by        = "alphabetical"
+sort_dir_first = true
+show_hidden    = false
+scrolloff      = 5
+
+[preview]
+wrap      = "no"
+tab_size  = 2
+max_width = 600
+max_height = 900
+
+[opener]
+edit = [
+  { run = "NVIM_APPNAME=nvim-general nvim %s", desc = "EDITOR", for = "unix", block = true },
+]
+play = [
+  { run = "open %s", desc = "Play", for = "macos" },
+]
+open = [
+  { run = "open %s", desc = "Open", for = "macos" },
+]
+reveal = [
+  { run = "open -R %s1", desc = "Reveal", for = "macos" },
+]
+extract = [
+  { run = "ya pub extract --list %s", desc = "Extract here" },
+]
+
+[tasks]
+file_workers    = 3
+plugin_workers  = 5
+fetch_workers   = 5
+preload_workers = 2
+
+[plugin]
+preloaders = [
+  { mime = "image/*", run = "image" },
+  { mime = "video/*", run = "video" },
+  { mime = "application/pdf", run = "pdf" },
+  { mime = "font/*", run = "font" },
+]
+previewers = [
+  { mime = "text/*", run = "code" },
+  { mime = "image/*", run = "image" },
+  { mime = "video/*", run = "video" },
+  { mime = "application/pdf", run = "pdf" },
+  { mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", run = "archive" },
+]
+
+[input]
+cursor_blink = false
+
+[which]
+cols = 3
