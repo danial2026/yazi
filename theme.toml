@@ -1,33 +1,60 @@
-# =============================================
-# theme.toml
-# =============================================
-
 [flavor]
 dark  = ""
 light = ""
 
-# --- Manager ---
-
 [manager]
+cwd = { fg = "#888888" }
+
+border_symbol = "│"
+border_style  = { fg = "#333333" }
+
+marker_copied   = { bg = "#333333" }
+marker_cut      = { bg = "#333333" }
+marker_selected = { bg = "#333333" }
+
+[tabs]
+active   = { fg = "#aaaaaa", bg = "#222222" }
+inactive = { fg = "#555555", bg = "#111111" }
+sep_inner = { open = "[", close = "]" }
+
+[mode]
+normal_main = { fg = "#888888", bg = "#222222" }
+normal_alt  = { fg = "#888888", bg = "#222222" }
+select_main = { fg = "#888888", bg = "#222222" }
+select_alt  = { fg = "#888888", bg = "#222222" }
+
+[indicator]
+current = { bg = "#2a2a2a" }
+padding = { open = " ", close = " " }
 
 [status]
-
-# --- Which ---
-
-[which]
-
-# --- Confirm ---
+overall   = { fg = "#888888", bg = "#1a1a1a" }
+sep_left  = { open = "[", close = "]" }
+sep_right = { open = "[", close = "]" }
 
 [confirm]
-
-# --- Notification ---
+border  = { fg = "#555555" }
+title   = { fg = "#888888" }
+btn_yes = { fg = "#aaaaaa", bg = "#333333" }
+btn_no  = { fg = "#444444" }
 
 [notify]
-
-# --- Input ---
+title_info  = { fg = "#888888" }
+title_warn  = { fg = "#888888" }
+title_error = { fg = "#888888" }
 
 [input]
-
-# --- Tasks ---
+border = { fg = "#333333" }
 
 [tasks]
+border  = { fg = "#333333" }
+hovered = { bg = "#2a2a2a" }
+
+[filetype]
+rules = [
+  { url = "*/", fg = "#888888" },
+]
+
+[icon]
+dirs = []
+exts = []
